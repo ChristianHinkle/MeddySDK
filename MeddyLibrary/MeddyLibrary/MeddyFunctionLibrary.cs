@@ -1,4 +1,4 @@
-﻿namespace MeddyExplorerLibrary
+﻿namespace MeddyLibrary
 {
     /// <summary>
     /// Collection of functions for using Meddy.
@@ -6,49 +6,38 @@
     public static class MeddyFunctionLibrary
     {
         /// <summary>
-        /// File extension used for meddydata files.
+        /// Meddy-project-relative pathname to the project's meddydata directory.
         /// </summary>
-        public const string MeddydataFileExtension = ".xmp";
+        public const string MeddydataDirectoryPathname = ".meddydata";
 
         /// <summary>
-        /// Given a path to a file or directory, get the path to its corresponding meddydata sidecar file.
+        /// Given a pathname to a file or directory, get the pathname to its corresponding meddydata.
         /// </summary>
-        public static string GetMeddydataSidecarPathFromFilePath(string inFilePath, bool inIsDirectory)
+        /// <param name="inFilePathname">Meddy-project-relative pathname to the file or directory.</param>
+        public static string GetMeddydataPathnameFromFilePathname(string inFilePathname)
         {
-            if (inIsDirectory == false)
-            {
-                return (inFilePath + MeddydataFileExtension);
-            }
-            else
-            {
-                return (inFilePath + Path.DirectorySeparatorChar + MeddydataFileExtension);
-            }
+            return (MeddydataDirectoryPathname + Path.DirectorySeparatorChar + inFilePathname);
         }
 
         /// <summary>
-        /// Given a path to a meddydata sidecar file, get the path to its corresponding file or directory.
-        /// This may be null.
+        /// Given a pathname to meddydata, get the pathname to its corresponding file or directory.
         /// </summary>
-        public static string? GetFilePathFromMeddydataSidecarPath(string inMeddydataSidecarPath)
+        /// <param name="inMeddydataPathname">Meddy-project-relative pathname to meddydata.</param>
+        public static string GetFilePathnameFromMeddydataPathname(string inMeddydataPathname)
         {
-            if (inMeddydataSidecarPath.EndsWith(MeddydataFileExtension) == false)
-            {
-                return null;
-            }
-
-            return Path.TrimEndingDirectorySeparator(inMeddydataSidecarPath.Remove(inMeddydataSidecarPath.LastIndexOf(MeddydataFileExtension)));
+            return inMeddydataPathname.Substring((MeddydataDirectoryPathname.Length - 1) + 2);
         }
 
         /// <summary>
-        /// Safely compares whether two given paths lead to the same location.
+        /// Safely compare whether two given pathnames lead to the same location.
         /// </summary>
-        public static bool FilePathsAreEqual(string inPathA, string inPathB)
+        public static bool PathnamesAreEqual(string inPathnameA, string inPathnameB)
         {
             return string.Equals(
-                Path.TrimEndingDirectorySeparator(Path.GetFullPath(inPathA)),
-                Path.TrimEndingDirectorySeparator(Path.GetFullPath(inPathB)),
-                StringComparison.InvariantCultureIgnoreCase
-            );
+                    Path.TrimEndingDirectorySeparator(Path.GetFullPath(inPathnameA)),
+                    Path.TrimEndingDirectorySeparator(Path.GetFullPath(inPathnameB)),
+                    StringComparison.InvariantCultureIgnoreCase
+                );
         }
     }
 }
