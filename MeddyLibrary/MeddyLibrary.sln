@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeddyLibrary.Meddydata", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeddyLibrary.Dam", "MeddyLibrary.Dam\MeddyLibrary.Dam.csproj", "{BF0A55D2-77A9-4820-9D4F-CA715534DCC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeddyLibraryCli", "MeddyLibraryCli\MeddyLibraryCli.csproj", "{682FA615-8B52-4B21-80EF-54FF4A7DE03B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BF0A55D2-77A9-4820-9D4F-CA715534DCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF0A55D2-77A9-4820-9D4F-CA715534DCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF0A55D2-77A9-4820-9D4F-CA715534DCC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682FA615-8B52-4B21-80EF-54FF4A7DE03B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682FA615-8B52-4B21-80EF-54FF4A7DE03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682FA615-8B52-4B21-80EF-54FF4A7DE03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682FA615-8B52-4B21-80EF-54FF4A7DE03B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
