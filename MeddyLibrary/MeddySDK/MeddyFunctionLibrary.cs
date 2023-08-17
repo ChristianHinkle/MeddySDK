@@ -1,4 +1,4 @@
-﻿namespace MeddyLibrary
+﻿namespace MeddySDK
 {
     /// <summary>
     /// Collection of functions for using Meddy.
