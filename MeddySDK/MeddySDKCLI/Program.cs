@@ -1,4 +1,4 @@
-﻿namespace MeddySDKCli
+﻿namespace MeddySDKCLI
 {
     internal class Program
     {
