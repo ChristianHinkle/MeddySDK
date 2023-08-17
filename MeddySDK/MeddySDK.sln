@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeddySDK.Meddydata", "MeddySDK.MeddyData\MeddySDK.Meddydata.csproj", "{1900544D-4E92-423F-B6BA-A9A7190DC7E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeddySDK.Meddydata", "MeddySDK.Meddydata\MeddySDK.Meddydata.csproj", "{1900544D-4E92-423F-B6BA-A9A7190DC7E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeddySDK.Dam", "MeddySDK.Dam\MeddySDK.Dam.csproj", "{BF0A55D2-77A9-4820-9D4F-CA715534DCC3}"
 EndProject
