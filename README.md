@@ -1,1 +1,1 @@
-# Meddy SDK
+# MeddySDK
