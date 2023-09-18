@@ -7,3 +7,6 @@
 [submodule "MeddySDK/MeddySDK.DAM"]
 	path = MeddySDK/MeddySDK.DAM
 	url = https://github.com/ChristianHinko/MeddySDK.DAM.git
+[submodule "MeddySDK/MeddySDKCLI"]
+	path = MeddySDK/MeddySDKCLI
+	url = https://github.com/ChristianHinko/MeddySDKCLI.git
