@@ -1,0 +1,9 @@
+[submodule "MeddySDK/MeddySDK.Meddyproject"]
+	path = MeddySDK/MeddySDK.Meddyproject
+	url = https://github.com/ChristianHinko/MeddySDK.Meddyproject.git
+[submodule "MeddySDK/MeddySDK.Meddydata"]
+	path = MeddySDK/MeddySDK.Meddydata
+	url = https://github.com/ChristianHinko/MeddySDK.Meddydata.git
+[submodule "MeddySDK/MeddySDK.DAM"]
+	path = MeddySDK/MeddySDK.DAM
+	url = https://github.com/ChristianHinko/MeddySDK.DAM.git
