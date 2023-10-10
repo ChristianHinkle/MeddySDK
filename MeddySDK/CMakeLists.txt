@@ -27,8 +27,8 @@ include(FetchContent)
 #
 
 FetchContent_Declare(MeddySDK_Meddyproject
-  SOURCE_DIR "${MeddySDK_SOURCE_DIR}/MeddySDK.Meddyproject"
-  SOURCE_SUBDIR "MeddySDK.Meddyproject"
+  SOURCE_DIR "${MeddySDK_SOURCE_DIR}/MeddySDK_Meddyproject"
+  SOURCE_SUBDIR "MeddySDK_Meddyproject"
   OVERRIDE_FIND_PACKAGE
   )
 
