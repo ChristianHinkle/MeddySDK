@@ -28,13 +28,11 @@ include(FetchContent)
 
 FetchContent_Declare(MeddySDK_Meddyproject
   SOURCE_DIR "${MeddySDK_SOURCE_DIR}/MeddySDK_Meddyproject"
-  SOURCE_SUBDIR "MeddySDK_Meddyproject"
   OVERRIDE_FIND_PACKAGE
   )
 
 FetchContent_Declare(MeddySDKCLI
   SOURCE_DIR "${MeddySDK_SOURCE_DIR}/MeddySDKCLI"
-  SOURCE_SUBDIR "MeddySDKCLI"
   OVERRIDE_FIND_PACKAGE
   )
 
