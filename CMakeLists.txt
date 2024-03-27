@@ -1,3 +1,4 @@
+# Copyright (c) 2023-2024 Christian Hinkle, Brian Hinkle.
 
 cmake_minimum_required(VERSION 3.24)
 
