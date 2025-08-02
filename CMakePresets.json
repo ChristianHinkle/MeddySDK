@@ -1,7 +1,13 @@
 {
     "version": 10,
-    "$comment": "TODO: Restructure json files and includes to make this nicer. Right now, we are only including MeddySDKCLI's file to avoid duplicate preset names.",
+    "cmakeMinimumRequired": {
+        "major": 4,
+        "minor": 0,
+        "patch": 0
+    },
+    "$comment": "We have includes of utility files search from the `${sourceDir}` (which is the top-level project's directory), so that it's the responsibility of the top-level project to provide these files. We do this to avoid potential duplicate includes of duplicate files. CMake throws an error if a preset is defined twice with the same name, but it does allow duplicate includes to the same file.",
     "include": [
+        "${sourceDir}/CMake/CMakePresets/GenericPresets.json",
         "MeddySDKCLI/CMakePresets.json"
     ]
 }
