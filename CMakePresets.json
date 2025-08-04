@@ -8,6 +8,7 @@
     "$comment": "We have includes of utility files search from the `${sourceDir}` (which is the top-level project's directory), so that it's the responsibility of the top-level project to provide these files. We do this to avoid potential duplicate includes of duplicate files. CMake throws an error if a preset is defined twice with the same name, but it does allow duplicate includes to the same file.",
     "include": [
         "${sourceDir}/CMake/CMakePresets/GenericPresets.json",
-        "MeddySDKCLI/CMakePresets.json"
+        "MeddySDKCLI/CMakePresets.json",
+        "MeddySDK_Meddyproject/CMakePresets.json"
     ]
 }
