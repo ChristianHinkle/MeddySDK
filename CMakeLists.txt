@@ -4,6 +4,11 @@ cmake_minimum_required(VERSION 3.24)
 
 project(MeddySDK LANGUAGES CXX)
 
+# Set up testing. Defines `BUILD_TESTING` which is ON by default. This must be called by the top-level project only.
+if(PROJECT_IS_TOP_LEVEL)
+  include(CTest)
+endif()
+
 #
 # We want to be build interface users of our subprojects instead of install
 # interface users, i.e., we want to build with our subprojects instead of building off
