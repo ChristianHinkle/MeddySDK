@@ -1,6 +1,6 @@
 # Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle.
 
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 4.0)
 
 project(MeddySDK LANGUAGES CXX)
 
