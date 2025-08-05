@@ -5,6 +5,9 @@
         "minor": 0,
         "patch": 0
     },
+    "$comment": [
+        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle."
+    ],
     "configurePresets": [
         {
             "name": "base",
