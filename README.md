@@ -1,18 +1,59 @@
 # MeddySDK
 
-The best practices of modern CMake consolidated into a collection of C++ projects.
+A superproject providing all the libraries Meddy has to offer. Each one is individually usable, although some may depend on others.
 
-CMake project structure:
-- [MeddySDKCLI](https://github.com/ChristianHinko/MeddySDKCLI/blob/master/CMakeLists.txt)
-    - Executable target.
-    - Depends on [MeddySDK_Meddyproject](https://github.com/ChristianHinko/MeddySDK_Meddyproject/blob/master/CMakeLists.txt).
-- [MeddySDK_Meddyproject](https://github.com/ChristianHinko/MeddySDK_Meddyproject/blob/master/CMakeLists.txt)
-    - Library target.
-    - ~~Depends on [BoostFilesystem](https://github.com/boostorg/filesystem/blob/develop/CMakeLists.txt).~~
-        - This dependency has been eliminated. The project now uses `std::filesystem` as a replacement.
+## Project Structure
 
-For a depenencies-included setup, see https://github.com/ChristianHinko/MeddySDKStandalone.
-- This includes third-party libraries, such as the Boost C++ Libraries.
+MeddySDK
+- [MeddySDKCLI](https://github.com/ChristianHinko/MeddySDKCLI) (executable)
+- [MeddySDK_Meddyproject](https://github.com/ChristianHinko/MeddySDK_Meddyproject) (library)
+- [MeddySDK_Meddydata](https://github.com/ChristianHinko/MeddySDK_Meddydata) (library)
+- [MeddySDK_DAM](https://github.com/ChristianHinko/MeddySDK_DAM) (library)
 
-For the superbuild version of this project structure, see https://github.com/ChristianHinko/MeddySDKSuperbuild.
-- The superbuild builds the projects together using ExternalProject instead of FetchContent.
+These projects are built together using `FetchContent` in CMake. This means they're all configured together during the same invokation of CMake, which makes development and debugging the subprojects easier.
+
+There is also a "superbuild" version of this project structure which uses `ExternalProject` in CMake to configure each project in isolation before they get built together. See: https://github.com/ChristianHinko/MeddySDKSuperbuild.
+
+## Build System ⌨
+
+Everything here is built off of CMake, which is cross-platform, and gets great support from IDEs.
+
+Our "CMakePresets.json" file takes care of feeding the right arguments to CMake, and provides presets for building, packaging, etc.
+
+### IDE Support
+
+Most IDEs provide built-in CMake features.
+
+VS Code has the "CMake Tools" and "C/C++" extensions, developed by Microsoft.
+
+Visual Studio has very nice integration, but they seem behind when it comes to supporting the latest CMake features. I've had experiences where I have to switch to using VS Code because of this.
+
+## Build Instructions 🔨
+
+This project is fully isolated from its dependencies, and therefore must be tied together by a superproject. See https://github.com/ChristianHinko/MeddySDKStandalone for a complete build setup.
+
+### 1. Invoke CMake on the Project (the Configure Step)
+
+Command line: `cmake --preset="windows-x64-debug"`.
+
+IDE: Choose the "windows-x64-debug" configure preset, and "configure" the CMake project.
+
+### 2. Invoke a Build Command 
+
+Command line: `cmake --build --preset="windows-x64-debug"`.
+
+IDE: Choose the "windows-x64-debug" build preset, and "build" it.
+
+## Package Instructions 📦
+
+Here's how to package this project into a distributable product.
+
+### 1. Build the Project
+
+See "Build Instructions" above.
+
+### 2. Invoke CPack
+
+Command line: `cpack --preset="meddysdkcli-windows-x64-debug-nsis"`.
+
+IDE: Choose the "meddysdkcli-windows-x64-debug-nsis" package preset, and "package" it.
