@@ -12,7 +12,7 @@ MeddySDK
 
 These projects are built together using `FetchContent` in CMake. This means they're all configured together during the same invokation of CMake, which makes development and debugging the subprojects easier.
 
-There is also a "superbuild" version of this project structure which uses `ExternalProject` in CMake to configure each project in isolation before they get built together. See: https://github.com/ChristianHinko/MeddySDKSuperbuild.
+There is also a "superbuild" version of this project structure which uses `ExternalProject` in CMake to configure each project in isolation, before they get built together. See: https://github.com/ChristianHinko/MeddySDKSuperbuild.
 
 ## Build System ⌨
 
