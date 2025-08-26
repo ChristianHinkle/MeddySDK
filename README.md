@@ -38,15 +38,15 @@ This project is fully isolated from its dependencies, and therefore must be tied
 
 ### 1. Invoke CMake on the Project (the Configure Step)
 
-Command line: `cmake --preset="windows-x64-debug"`.
+Command line: `cmake --preset="win-debug-default"`.
 
-IDE: Choose the `windows-x64-debug` configure preset, and "configure" the CMake project.
+IDE: Choose the `win-debug-default` configure preset, and "configure" the CMake project.
 
 ### 2. Invoke a Build Command
 
-Command line: `cmake --build --preset="windows-x64-debug"`.
+Command line: `cmake --build --preset="win-debug"`.
 
-IDE: Choose the `windows-x64-debug` build preset, and "build" it.
+IDE: Choose the `win-debug` build preset, and "build" it.
 
 ## Package Instructions 📦
 
@@ -58,9 +58,9 @@ See "Build Instructions" above.
 
 ### 2. Invoke CPack
 
-Command line: `cpack --preset="meddysdkcli-windows-x64-debug-nsis"`.
+Command line: `cpack --preset="meddysdkcli-win-debug-nsis"`.
 
-IDE: Choose the `meddysdkcli-windows-x64-debug-nsis` package preset, and "package" it.
+IDE: Choose the `meddysdkcli-win-debug-nsis` package preset, and "package" it.
 
 ## Test Instructions 🧪
 
@@ -72,6 +72,6 @@ See "Build Instructions" above.
 
 ### 2. Invoke CTest
 
-Command line: `ctest --preset="meddysdk-windows-x64-debug"`.
+Command line: `ctest --preset="meddysdk-win-debug"`.
 
-IDE: Choose the `meddysdk-windows-x64-debug` test preset, and "run tests".
+IDE: Choose the `meddysdk-win-debug` test preset, and "run tests".
