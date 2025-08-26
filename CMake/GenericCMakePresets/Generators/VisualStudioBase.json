@@ -1,0 +1,31 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 4,
+        "minor": 0,
+        "patch": 0
+    },
+    "$comment": [
+        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle."
+    ],
+    "configurePresets": [
+        {
+            "name": "x64-win-vs-base",
+            "hidden": true,
+            "architecture": {
+                "value": "x64",
+                "strategy": "set"
+            },
+            "description": "Specifies the x64 architecture for Visual Studio generators on Windows."
+        },
+        {
+            "name": "x86-win-vs-base",
+            "hidden": true,
+            "architecture": {
+                "value": "Win32",
+                "strategy": "set"
+            },
+            "description": "Specifies the x86 architecture for Visual Studio generators on Windows."
+        }
+    ]
+}

@@ -7,10 +7,10 @@
     },
     "$comment": [
         "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle.",
-        "Includes: We have includes of utility files search from the `${sourceDir}` (which is the top-level project's directory), so that it's the responsibility of the top-level project to provide these files. We do this to avoid potential duplicate includes of duplicate files. CMake throws an error if a preset is defined twice with the same name, but it does allow duplicate includes to the same file."
+        "Includes: We have includes of utility files search from the `${sourceDir}` (which is the top-level project's directory), so that it's the responsibility of the top-level project to provide these files. We do this to avoid multiple includes to duplicate files. CMake throws an error if a preset is defined twice with the same name, but it does allow duplicate includes to the same file."
     ],
     "include": [
-        "${sourceDir}/CMake/CMakePresets/GenericPresets.json",
+        "${sourceDir}/CMake/GenericCMakePresets/GenericPresets.json",
         "MeddySDKCLI/CMakePresets.json",
         "MeddySDK_Meddyproject/CMakePresets.json"
     ],
@@ -25,35 +25,19 @@
             }
         },
         {
-            "name": "meddysdk-windows-x64-debug",
-            "displayName": "MeddySDK - Windows x64 Debug",
+            "name": "meddysdk-win-debug",
+            "displayName": "MeddySDK - Windows Debug",
             "inherits": [
                 "meddysdk-base",
-                "windows-x64-debug"
+                "win-debug"
             ]
         },
         {
-            "name": "meddysdk-windows-x64-release",
-            "displayName": "MeddySDK - Windows x64 Release",
+            "name": "meddysdk-win-release",
+            "displayName": "MeddySDK - Windows Release",
             "inherits": [
                 "meddysdk-base",
-                "windows-x64-release"
-            ]
-        },
-        {
-            "name": "meddysdk-windows-x86-debug",
-            "displayName": "MeddySDK - Windows x86 Debug",
-            "inherits": [
-                "meddysdk-base",
-                "windows-x86-debug"
-            ]
-        },
-        {
-            "name": "meddysdk-windows-x86-release",
-            "displayName": "MeddySDK - Windows x86 Release",
-            "inherits": [
-                "meddysdk-base",
-                "windows-x86-release"
+                "win-release"
             ]
         },
         {

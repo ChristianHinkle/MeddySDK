@@ -1,0 +1,50 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 4,
+        "minor": 0,
+        "patch": 0
+    },
+    "$comment": [
+        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle."
+    ],
+    "include": [
+        "${sourceDir}/CMake/GenericCMakePresets/Platforms/Windows.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Generators/NinjaBase.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Generators/VisualStudioBase.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "win64-debug-ninja",
+            "displayName": "Windows x64 Debug (Ninja)",
+            "inherits": [
+                "win-debug-ninja",
+                "x64-ninja-base"
+            ]
+        },
+        {
+            "name": "win64-release-ninja",
+            "displayName": "Windows x64 Release (Ninja)",
+            "inherits": [
+                "win-release-ninja",
+                "x64-ninja-base"
+            ]
+        },
+        {
+            "name": "win64-debug-vs",
+            "displayName": "Windows x64 Debug (Visual Studio)",
+            "inherits": [
+                "win-debug-vs",
+                "x64-win-vs-base"
+            ]
+        },
+        {
+            "name": "win64-release-vs",
+            "displayName": "Windows x64 Release (Visual Studio)",
+            "inherits": [
+                "win-release-vs",
+                "x64-win-vs-base"
+            ]
+        }
+    ]
+}

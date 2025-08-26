@@ -1,0 +1,98 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 4,
+        "minor": 0,
+        "patch": 0
+    },
+    "$comment": [
+        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle."
+    ],
+    "include": [
+        "${sourceDir}/CMake/GenericCMakePresets/Base.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Platforms/Base.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Generators/Base.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "linux-debug-default",
+            "displayName": "Linux Debug (Default)",
+            "inherits": [
+                "base",
+                "linux-base",
+                "debug-base"
+            ]
+        },
+        {
+            "name": "linux-release-default",
+            "displayName": "Linux Release (Default)",
+            "inherits": [
+                "base",
+                "linux-base",
+                "release-base"
+            ]
+        },
+        {
+            "name": "linux-debug-ninja",
+            "displayName": "Linux Debug (Ninja)",
+            "inherits": [
+                "linux-debug-default",
+                "ninja-base"
+            ]
+        },
+        {
+            "name": "linux-release-ninja",
+            "displayName": "Linux Release (Ninja)",
+            "inherits": [
+                "linux-release-default",
+                "ninja-base"
+            ]
+        },
+        {
+            "name": "linux-debug-unix-makefiles",
+            "displayName": "Linux Debug (Unix Makefiles)",
+            "inherits": [
+                "linux-debug-default",
+                "unix-makefiles-base"
+            ]
+        },
+        {
+            "name": "linux-release-unix-makefiles",
+            "displayName": "Linux Release (Unix Makefiles)",
+            "inherits": [
+                "linux-release-default",
+                "unix-makefiles-base"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "configurePreset": "linux-debug-default"
+        },
+        {
+            "name": "linux-release",
+            "displayName": "Linux Release",
+            "configurePreset": "linux-release-default"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "inherits": [
+                "debug-base"
+            ],
+            "configurePreset": "linux-debug-default"
+        },
+        {
+            "name": "linux-release",
+            "displayName": "Linux Release",
+            "inherits": [
+                "release-base"
+            ],
+            "configurePreset": "linux-release-default"
+        }
+    ]
+}

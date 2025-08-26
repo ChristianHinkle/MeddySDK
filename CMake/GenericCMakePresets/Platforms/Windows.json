@@ -1,0 +1,100 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 4,
+        "minor": 0,
+        "patch": 0
+    },
+    "$comment": [
+        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle."
+    ],
+    "include": [
+        "${sourceDir}/CMake/GenericCMakePresets/Base.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Platforms/Base.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Generators/Base.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Generators/NinjaBase.json",
+        "${sourceDir}/CMake/GenericCMakePresets/Generators/VisualStudioBase.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "win-debug-default",
+            "displayName": "Windows Debug (Default)",
+            "inherits": [
+                "base",
+                "win-base",
+                "debug-base"
+            ]
+        },
+        {
+            "name": "win-release-default",
+            "displayName": "Windows Release (Default)",
+            "inherits": [
+                "base",
+                "win-base",
+                "release-base"
+            ]
+        },
+        {
+            "name": "win-debug-ninja",
+            "displayName": "Windows Debug (Ninja)",
+            "inherits": [
+                "win-debug-default",
+                "ninja-base"
+            ]
+        },
+        {
+            "name": "win-release-ninja",
+            "displayName": "Windows Release (Ninja)",
+            "inherits": [
+                "win-release-default",
+                "ninja-base"
+            ]
+        },
+        {
+            "name": "win-debug-vs",
+            "displayName": "Windows Debug (Visual Studio)",
+            "inherits": [
+                "win-debug-default",
+                "vs-base"
+            ]
+        },
+        {
+            "name": "win-release-vs",
+            "displayName": "Windows Release (Visual Studio)",
+            "inherits": [
+                "win-release-default",
+                "vs-base"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "win-debug",
+            "displayName": "Windows Debug",
+            "configurePreset": "win-debug-default"
+        },
+        {
+            "name": "win-release",
+            "displayName": "Windows Release",
+            "configurePreset": "win-release-default"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "win-debug",
+            "displayName": "Windows Debug",
+            "inherits": [
+                "debug-base"
+            ],
+            "configurePreset": "win-debug-default"
+        },
+        {
+            "name": "win-release",
+            "displayName": "Windows Release",
+            "inherits": [
+                "release-base"
+            ],
+            "configurePreset": "win-release-default"
+        }
+    ]
+}
