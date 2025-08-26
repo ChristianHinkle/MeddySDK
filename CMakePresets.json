@@ -13,5 +13,80 @@
         "${sourceDir}/CMake/CMakePresets/GenericPresets.json",
         "MeddySDKCLI/CMakePresets.json",
         "MeddySDK_Meddyproject/CMakePresets.json"
+    ],
+    "testPresets": [
+        {
+            "name": "meddysdk-base",
+            "hidden": true,
+            "filter": {
+                "include": {
+                    "name": "MeddySDK."
+                }
+            }
+        },
+        {
+            "name": "meddysdk-windows-x64-debug",
+            "displayName": "MeddySDK - Windows x64 Debug",
+            "inherits": [
+                "meddysdk-base",
+                "windows-x64-debug"
+            ]
+        },
+        {
+            "name": "meddysdk-windows-x64-release",
+            "displayName": "MeddySDK - Windows x64 Release",
+            "inherits": [
+                "meddysdk-base",
+                "windows-x64-release"
+            ]
+        },
+        {
+            "name": "meddysdk-windows-x86-debug",
+            "displayName": "MeddySDK - Windows x86 Debug",
+            "inherits": [
+                "meddysdk-base",
+                "windows-x86-debug"
+            ]
+        },
+        {
+            "name": "meddysdk-windows-x86-release",
+            "displayName": "MeddySDK - Windows x86 Release",
+            "inherits": [
+                "meddysdk-base",
+                "windows-x86-release"
+            ]
+        },
+        {
+            "name": "meddysdk-linux-debug",
+            "displayName": "MeddySDK - Linux Debug",
+            "inherits": [
+                "meddysdk-base",
+                "linux-debug"
+            ]
+        },
+        {
+            "name": "meddysdk-linux-release",
+            "displayName": "MeddySDK - Linux Release",
+            "inherits": [
+                "meddysdk-base",
+                "linux-release"
+            ]
+        },
+        {
+            "name": "meddysdk-macos-debug",
+            "displayName": "MeddySDK - macOS Debug",
+            "inherits": [
+                "meddysdk-base",
+                "macos-debug"
+            ]
+        },
+        {
+            "name": "meddysdk-macos-release",
+            "displayName": "MeddySDK - macOS Release",
+            "inherits": [
+                "meddysdk-base",
+                "macos-release"
+            ]
+        }
     ]
 }
