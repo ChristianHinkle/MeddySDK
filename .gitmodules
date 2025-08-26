@@ -10,3 +10,6 @@
 [submodule "MeddySDK/MeddySDKCLI"]
 	path = MeddySDKCLI
 	url = https://github.com/ChristianHinko/MeddySDKCLI.git
+[submodule "GeneralCMakePresets"]
+	path = GeneralCMakePresets
+	url = https://github.com/ChristianHinko/GeneralCMakePresets
