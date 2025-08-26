@@ -203,6 +203,82 @@
             "configurePreset": "macos-release"
         }
     ],
+    "testPresets": [
+        {
+            "name": "debug-base",
+            "hidden": true,
+            "configuration": "Debug"
+        },
+        {
+            "name": "release-base",
+            "hidden": true,
+            "configuration": "Release"
+        },
+        {
+            "name": "windows-x64-debug",
+            "displayName": "Windows x64 Debug",
+            "inherits": [
+                "debug-base"
+            ],
+            "configurePreset": "windows-x64-debug"
+        },
+        {
+            "name": "windows-x64-release",
+            "displayName": "Windows x64 Release",
+            "inherits": [
+                "release-base"
+            ],
+            "configurePreset": "windows-x64-release"
+        },
+        {
+            "name": "windows-x86-debug",
+            "displayName": "Windows x86 Debug",
+            "inherits": [
+                "debug-base"
+            ],
+            "configurePreset": "windows-x86-debug"
+        },
+        {
+            "name": "windows-x86-release",
+            "displayName": "Windows x86 Release",
+            "inherits": [
+                "release-base"
+            ],
+            "configurePreset": "windows-x86-release"
+        },
+        {
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "inherits": [
+                "debug-base"
+            ],
+            "configurePreset": "linux-debug"
+        },
+        {
+            "name": "linux-release",
+            "displayName": "Linux Release",
+            "inherits": [
+                "release-base"
+            ],
+            "configurePreset": "linux-release"
+        },
+        {
+            "name": "macos-debug",
+            "displayName": "macOS Debug",
+            "inherits": [
+                "debug-base"
+            ],
+            "configurePreset": "macos-debug"
+        },
+        {
+            "name": "macos-release",
+            "displayName": "macOS Release",
+            "inherits": [
+                "release-base"
+            ],
+            "configurePreset": "macos-release"
+        }
+    ],
     "packagePresets": [
         {
             "name": "nsis-base",
