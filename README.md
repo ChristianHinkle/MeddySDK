@@ -2,7 +2,7 @@
 
 A superproject providing all the libraries Meddy has to offer. Each one is individually usable, although some may depend on others.
 
-## Project Structure
+## Project Structure 📂
 
 MeddySDK
 - [MeddySDKCLI](https://github.com/ChristianHinko/MeddySDKCLI) (executable)
