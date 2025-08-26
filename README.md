@@ -61,3 +61,17 @@ See "Build Instructions" above.
 Command line: `cpack --preset="meddysdkcli-windows-x64-debug-nsis"`.
 
 IDE: Choose the `meddysdkcli-windows-x64-debug-nsis` package preset, and "package" it.
+
+## Test Instructions 🧪
+
+Here's how to run automated tests, to verify that our code behaves as intended.
+
+### 1. Build the Project
+
+See "Build Instructions" above.
+
+### 2. Invoke CTest
+
+Command line: `ctest --preset="meddysdk-windows-x64-debug"`.
+
+IDE: Choose the `meddysdk-windows-x64-debug` test preset, and "run tests".
