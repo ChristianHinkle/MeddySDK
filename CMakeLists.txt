@@ -37,11 +37,6 @@ FetchContent_Declare(MeddySDK_Meddyproject
   OVERRIDE_FIND_PACKAGE
   )
 
-FetchContent_Declare(MeddySDKCLI
-  SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/MeddySDKCLI"
-  OVERRIDE_FIND_PACKAGE
-  )
-
 #
 # Add subprojects.
 #
@@ -52,5 +47,3 @@ FetchContent_Declare(MeddySDKCLI
 #
 
 FetchContent_MakeAvailable(MeddySDK_Meddyproject)
-
-FetchContent_MakeAvailable(MeddySDKCLI)

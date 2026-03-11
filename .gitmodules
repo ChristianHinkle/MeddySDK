@@ -7,9 +7,6 @@
 [submodule "MeddySDK/MeddySDK_DAM"]
 	path = MeddySDK_DAM
 	url = https://github.com/ChristianHinko/MeddySDK_DAM.git
-[submodule "MeddySDK/MeddySDKCLI"]
-	path = MeddySDKCLI
-	url = https://github.com/ChristianHinko/MeddySDKCLI.git
 [submodule "GeneralCMakePresets"]
 	path = GeneralCMakePresets
 	url = https://github.com/ChristianHinko/GeneralCMakePresets
