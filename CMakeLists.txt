@@ -2,7 +2,12 @@
 
 cmake_minimum_required(VERSION 4.0)
 
-project(MeddySDK LANGUAGES CXX)
+project(MeddySDK
+  VERSION 0.1.0
+  DESCRIPTION ""
+  HOMEPAGE_URL "https://github.com/ChristianHinkle/MeddySDK"
+  LANGUAGES CXX
+  )
 
 # Set up testing. Defines `BUILD_TESTING` which is ON by default. This must be called by the top-level project only.
 if(PROJECT_IS_TOP_LEVEL)

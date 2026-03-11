@@ -10,7 +10,7 @@ Key benefits of this project structure I designed:
 ## Project Structure 📂
 
 MeddySDK
-- [MeddySDKCLI](https://github.com/ChristianHinko/MeddySDKCLI) (executable)
+- [MeddyCLI](https://github.com/ChristianHinko/MeddyCLI) (executable)
 - [MeddySDK_Meddyproject](https://github.com/ChristianHinko/MeddySDK_Meddyproject) (library)
 - [MeddySDK_Meddydata](https://github.com/ChristianHinko/MeddySDK_Meddydata) (library)
 - [MeddySDK_DAM](https://github.com/ChristianHinko/MeddySDK_DAM) (library)
@@ -63,9 +63,9 @@ See "Build Instructions" above.
 
 ### 2. Invoke CPack
 
-Command line: `cpack --preset="meddysdkcli-win-debug-nsis"`.
+Command line: `cpack --preset="meddycli-win-debug-nsis"`.
 
-IDE: Choose the `meddysdkcli-win-debug-nsis` package preset, and "package" it.
+IDE: Choose the `meddycli-win-debug-nsis` package preset, and "package" it.
 
 ## Test Instructions 🧪
 
