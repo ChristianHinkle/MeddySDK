@@ -1,6 +1,8 @@
 # MeddySDK
 
-A superproject providing all the libraries Meddy has to offer. Each one is individually usable, although some may depend on others.
+A superproject providing all the libraries MeddySDK has to offer. Each one is individually usable, although some may depend on others.
+
+See [MeddySuperproject](https://github.com/ChristianHinkle/MeddySuperproject) for the rest of the Meddy repositories and further documentation.
 
 Key benefits of this project structure I designed:
 - Fulfills any CMake use case (namely, installation and local build use cases).
@@ -10,14 +12,9 @@ Key benefits of this project structure I designed:
 ## Project Structure 📂
 
 MeddySDK
-- [MeddyCLI](https://github.com/ChristianHinko/MeddyCLI) (executable)
-- [MeddySDK_Meddyproject](https://github.com/ChristianHinko/MeddySDK_Meddyproject) (library)
-- [MeddySDK_Meddydata](https://github.com/ChristianHinko/MeddySDK_Meddydata) (library)
-- [MeddySDK_DAM](https://github.com/ChristianHinko/MeddySDK_DAM) (library)
-
-These projects are built together using `FetchContent` in CMake. This means they configure together (all from the same invocation of CMake), which makes debugging and development easier with the subprojects.
-
-There is also a "superbuild" version of this project structure which uses `ExternalProject` in CMake to configure each project in isolation, before they get built together. See: [MeddySDKSuperbuild](https://github.com/ChristianHinko/MeddySDKSuperbuild).
+- [MeddySDK_Meddyproject](https://github.com/ChristianHinkle/MeddySDK_Meddyproject) (library)
+- [MeddySDK_Meddydata](https://github.com/ChristianHinkle/MeddySDK_Meddydata) (library)
+- [MeddySDK_DAM](https://github.com/ChristianHinkle/MeddySDK_DAM) (library)
 
 ## Build System ⌨
 
@@ -39,44 +36,4 @@ Has very nice integration, but they seem behind when it comes to supporting the 
 
 ## Build Instructions 🔨
 
-This project is fully isolated from its dependencies, and therefore must be tied together by a superproject. See [MeddySDKStandalone](https://github.com/ChristianHinko/MeddySDKStandalone) for a complete build setup.
-
-### 1. Invoke CMake on the Project (the Configure Step)
-
-Command line: `cmake --preset="win-debug-default"`.
-
-IDE: Choose the `win-debug-default` configure preset, and "configure" the CMake project.
-
-### 2. Invoke a Build Command
-
-Command line: `cmake --build --preset="win-debug"`.
-
-IDE: Choose the `win-debug` build preset, and "build" it.
-
-## Package Instructions 📦
-
-Here's how to package the build into a distributable product.
-
-### 1. Build the Project
-
-See "Build Instructions" above.
-
-### 2. Invoke CPack
-
-Command line: `cpack --preset="meddycli-win-debug-nsis"`.
-
-IDE: Choose the `meddycli-win-debug-nsis` package preset, and "package" it.
-
-## Test Instructions 🧪
-
-Here's how to run automated tests, to verify that our code behaves as intended.
-
-### 1. Build the Project
-
-See "Build Instructions" above.
-
-### 2. Invoke CTest
-
-Command line: `ctest --preset="meddysdk-win-debug"`.
-
-IDE: Choose the `meddysdk-win-debug` test preset, and "run tests".
+This project is fully isolated from its dependencies, and therefore must be tied together by a superproject. See [MeddySuperproject](https://github.com/ChristianHinkle/MeddySuperproject) for a complete build setup, as well as instructions for how to build, package, and test.
