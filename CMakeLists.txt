@@ -42,6 +42,16 @@ FetchContent_Declare(MeddySDK_Meddyproject
   OVERRIDE_FIND_PACKAGE
   )
 
+FetchContent_Declare(MeddySDK_Meddydata
+  SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/MeddySDK_Meddydata"
+  OVERRIDE_FIND_PACKAGE
+  )
+
+FetchContent_Declare(MeddySDK_DAM
+  SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/MeddySDK_DAM"
+  OVERRIDE_FIND_PACKAGE
+  )
+
 #
 # Add subprojects.
 #
@@ -52,3 +62,7 @@ FetchContent_Declare(MeddySDK_Meddyproject
 #
 
 FetchContent_MakeAvailable(MeddySDK_Meddyproject)
+
+FetchContent_MakeAvailable(MeddySDK_Meddydata)
+
+FetchContent_MakeAvailable(MeddySDK_DAM)

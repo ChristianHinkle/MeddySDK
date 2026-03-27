@@ -11,7 +11,9 @@
     ],
     "include": [
         "${sourceDir}/CMakePresets_General/CMakePresets.json",
-        "MeddySDK_Meddyproject/CMakePresets.json"
+        "MeddySDK_Meddyproject/CMakePresets.json",
+        "MeddySDK_Meddydata/CMakePresets.json",
+        "MeddySDK_DAM/CMakePresets.json"
     ],
     "testPresets": [
         {
