@@ -7,6 +7,6 @@
 [submodule "MeddySDK/MeddySDK_DAM"]
 	path = MeddySDK_DAM
 	url = https://github.com/ChristianHinkle/MeddySDK_DAM.git
-[submodule "GeneralCMakePresets"]
-	path = GeneralCMakePresets
-	url = https://github.com/ChristianHinkle/GeneralCMakePresets
+[submodule "CMakePresets_General"]
+	path = CMakePresets_General
+	url = https://github.com/ChristianHinkle/CMakePresets_General.git
